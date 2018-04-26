@@ -1,7 +1,10 @@
 'use strict';
 
-const Letter = function() {
+const Letter = function(letter) {
+    this.stringStorage = " ";
     
 }
 
-module.exports(Letter);
+console.log(Letter);
+
+module.exports = Letter;

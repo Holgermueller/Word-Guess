@@ -20,5 +20,6 @@
     "inquirer": "^5.2.0",
     "prompt": "^1.0.0",
     "require": "^2.4.20"
-  }
+  },
+  "devDependencies": {}
 }
