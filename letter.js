@@ -1,5 +1,7 @@
 'use strict';
 
+let prompt = require('prompt');
+
 const Letter = function(character, correct) {
     //create string value to store underlying character for letter
     this.character = character;
@@ -12,8 +14,10 @@ const Letter = function(character, correct) {
         let userGuess = event.key;
         if (userGuess === this.character) {
             return letters;
+            console.log("Good guess!");
         } else {
             return '_';
+            console.log("Sorry, that's wrong.");
         }
     }
 
