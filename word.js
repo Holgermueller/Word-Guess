@@ -1,5 +1,6 @@
 'use strict';
 
+//require Letter constructor
 const Letter = require("./letter.js");
 
 const Word = function(currentWord){
