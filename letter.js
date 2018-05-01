@@ -1,6 +1,7 @@
 'use strict';
 
 let prompt = require('prompt');
+let colors = require('colors/safe');
 
 const Letter = function(character, correct) {
     //create string value to store underlying character for letter
@@ -11,13 +12,10 @@ const Letter = function(character, correct) {
 
     //create function to return underlying character if guessed or underscore if not guessed
     this.returnCharacter = function(){
-        let userGuess = event.key;
-        if (userGuess === this.character) {
-            return letters;
-            console.log("Good guess!");
+        if (this.character) {
+            console.log(this.character);
         } else {
-            return '_';
-            console.log("Sorry, that's wrong.");
+            console.log('_');
         }
     }
 
@@ -32,5 +30,9 @@ const Letter = function(character, correct) {
     }
 
 }
+
+//check to see if it works: it works
+//let letterOne = new Letter ("a");
+//letterOne.returnCharacter();
 
 module.exports = Letter;
