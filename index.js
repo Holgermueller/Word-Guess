@@ -141,8 +141,15 @@ function userWins(){
         console.log("Losses: " + losses);
         console.log("===========================================");
         tryAgain();
+    } else if (underscoresLeft === theWord.letters.length){
+        console.log("===========================================");
+        console.log("You win! You are a true X-Men fan!");
+        console.log("wins: " + wins);
+        console.log("Losses: " + losses);
+        console.log("===========================================");
+        tryAgain();
     } else {
-        
+        guessTheLetter("");
     }
 }
 
