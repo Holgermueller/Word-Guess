@@ -154,5 +154,22 @@ function userWins(){
 }
 
 function tryAgain(){
-
+    let tryGameAgain = [{
+        type: 'confirm',
+        name: 'tryAgain',
+        message: "Want to try again?",
+        default: true
+    }];
+    inquirer.prompt(tryGameAgain).then(playerWantsTo => { 
+        if (playerWantsTo.tryAgain) {
+            let alreadyGuessed = "";
+            let guessesArray = [];
+            let underscoresLeft = 0;
+            console.log("Welcome back!");
+            gameStart();
+        } else {
+            console.log("Sorry to see you go.");
+            return;
+        }
+    });
 }
