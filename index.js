@@ -31,6 +31,8 @@ const listOfWords = ['Colossus', 'Deadpool', 'Wolverine', 'Cyclops', 'Rogue', 'P
 //show player rules
 
 
+
+
 //create function to randomly select a word
 //use Word constructor to store it
 function wordChooser(){
@@ -74,7 +76,6 @@ function gameStart(){
     let alreadyGuessed = "";
     let guessesArray = [];
 }
-
 
 //keep track of users remaining guesses
 function guessTheLetter(){
