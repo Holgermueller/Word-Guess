@@ -19,7 +19,6 @@
   "dependencies": {
     "colors": "^1.2.1",
     "inquirer": "^5.2.0",
-    "prompt": "^1.0.0",
     "require": "^2.4.20"
   },
   "devDependencies": {}

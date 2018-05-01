@@ -35,9 +35,9 @@ const Word = function(currentWord){
 }
 
 //test constuctor:
-let testWord = new Word ("Deadpool");
-testWord.stringWord();
-testWord.lettersGenerator();
+//let testWord = new Word ("Deadpool");
+//testWord.stringWord();
+//testWord.lettersGenerator();
 
 //export to index.js
 module.exports = Word;
