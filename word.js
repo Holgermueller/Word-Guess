@@ -11,9 +11,17 @@ const Word = function(currentWord){
     //Letter.js and displays the character or an underscore. Concatenate these together.
     this.stringWord = function(){
         this.letters = this.currentWord.split("");
-        console.log(this.letters);
+        //console.log(this.letters);
+        underscoresForWord = this.letters.length;
+        //console.log("Underscores: " + underscoresForWord);
+        //for (let i = 0; i < underscoresForWord; i++ ){
+        //    this.underscores.push('_ ');
+        //}
+        //console.log(this.underscores);
+        console.log(this.underscores.join(' '));
     }
     //create function that takes a character as argument and calls guess function in Letter.js
+    
 }
 
 module.exports = Word;
