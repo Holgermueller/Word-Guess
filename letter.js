@@ -5,7 +5,7 @@ let colors = require('colors/safe');
 
 const Letter = function(character, correct) {
     //create string value to store underlying character for letter
-    this.character = character;
+    this.character = character.toUpperCase;
 
     //create boolean value to store if letter has been guessed yet
     this.correct = false;
