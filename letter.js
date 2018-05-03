@@ -30,6 +30,11 @@ Letter.prototype.characterChecker = function (character) {
 }
 
 //check to see if it works: it works
-
+//let testLetter = new Letter("d");
+//console.log(testLetter.toString())
+//testLetter.characterChecker("a");
+//console.log(testLetter.toString())
+//testLetter.characterChecker("d");
+//console.log(testLetter.toString())
 
 module.exports = Letter;
