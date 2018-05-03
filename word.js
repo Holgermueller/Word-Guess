@@ -7,38 +7,46 @@ const Word = function(currentWord){
     //to store the current word
     this.currentWord = currentWord;
     //for letters in the chosen word
-    this.letters = [];
+    let wordArray = this.currentWord.split("");
+    this.letters = wordArray.map(function(char){
+        return(new Letter(char))
+    });
     //underscores to replace letters until letters are guessed
     this.underscores = [];
     //create function that returns a string representing the word. Calls function defined in...
     //Letter.js and displays the character or an underscore. Concatenate these together.
-    this.stringWord = function(){
-        this.letters = this.currentWord.split("");
-        //console.log(this.letters);
-        //produce underscores to replace letters
-        let underscoresForWord = this.letters.length;
-        //console.log("Underscores: " + underscoresForWord);
-        //for (let i = 0; i < underscoresForWord; i++ ){
-        //    this.underscores.push('_ ');
-        //}
-        //console.log(this.underscores);
-        console.log(this.underscores.join(" "));
+}
+
+Word.prototype.toString = function(){
+    return this.letters.join(" ");
+};
+
+Word.prototype.guessLetter = function(char){
+    let isCharCorrect = false;
+    for (let i = 0; i < this.letters.length; i++){
+        if (this.letters[i].characterChecker(char)) {
+            isCharCorrect = true;
+        }
     }
-    //create function that takes a character as argument and calls guess function in Letter.js
-    this.lettersGenerator = function(){
-       for (let i = 0; this.letters.length; i++){
-            this.letters[i] = new Letter (this.letters[i]);
-            //this.letters[i].correct = true;
-            //console.log(this.letters[i]);
-            this.letters[i].returnCharacter();
-           }
+    return isCharCorrect;
+}
+
+Word.prototype.isWordGuessed = function(){
+    for (let i = 0; i < this.letters.length; i++){
+        if (!this.letters[i].correct) {
+            return false;
+        }
     }
+    return true;
 }
 
 //test constuctor:
-//let testWord = new Word ("Deadpool");
+let testWord = new Word ("Deadpool");
 //testWord.stringWord();
 //testWord.lettersGenerator();
+console.log(testWord.toString());
+testWord.guessLetter('d');
+console.log(testWord.toString());
 
 //export to index.js
 module.exports = Word;
