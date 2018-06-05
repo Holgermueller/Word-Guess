@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/Holgermueller/Word-Guess#readme",
   "dependencies": {
-    "chalk": "^2.4.1",
     "colors": "^1.2.1",
     "figlet": "^1.2.0",
     "inquirer": "^5.2.0",
