@@ -20,7 +20,7 @@
     "chalk": "^4.1.0",
     "figlet": "^1.5.0",
     "inquirer": "^7.3.2",
-    "npm": "^9.6.5",
+    "npm": "^9.7.2",
     "require": "^2.4.20"
   },
   "devDependencies": {}
